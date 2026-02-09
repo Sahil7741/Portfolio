@@ -177,7 +177,7 @@ export default function Hero() {
                     <div className={styles.heroImageContainer}>
                         <div className={styles.heroImageGlow}></div>
                         <Image
-                            src="https://avatars.githubusercontent.com/u/112881021?v=4"
+                            src="https://avatars.githubusercontent.com/u/112881021?v=5"
                             alt="Sahil"
                             width={400}
                             height={400}
