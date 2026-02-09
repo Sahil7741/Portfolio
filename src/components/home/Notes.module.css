@@ -1,0 +1,50 @@
+/* Notes.module.css */
+.section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.note {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.note:hover {
+  background: var(--surface-highlight);
+  border-color: var(--foreground-muted);
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--foreground-muted);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.noteTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--foreground);
+}
+
+.excerpt {
+  font-size: 0.9rem;
+  color: var(--foreground-muted);
+  line-height: 1.5;
+}

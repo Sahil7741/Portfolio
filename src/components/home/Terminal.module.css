@@ -1,0 +1,157 @@
+/* Terminal.module.css - Linux Terminal Style */
+.terminal {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-terminal);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  background: var(--bg-tertiary);
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--border-primary);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.controls {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dot:hover {
+  opacity: 0.8;
+}
+
+.close { background: #ff5f57; }
+.minimize { background: #febc2e; }
+.maximize { background: #28c840; }
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--fg-secondary);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tabActive {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  color: var(--fg-primary);
+}
+
+.body {
+  padding: 1rem;
+  color: var(--fg-primary);
+  font-size: 0.85rem;
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+/* Bash-style prompt colors */
+.user {
+  color: var(--term-green);
+  font-weight: 600;
+}
+
+.at {
+  color: var(--fg-secondary);
+}
+
+.host {
+  color: var(--term-green);
+  font-weight: 600;
+}
+
+.colon {
+  color: var(--fg-secondary);
+}
+
+.path {
+  color: var(--term-blue);
+  font-weight: 600;
+}
+
+.dollar {
+  color: var(--fg-secondary);
+  margin-right: 0.5rem;
+  margin-left: 0.25rem;
+}
+
+.command {
+  color: var(--fg-primary);
+}
+
+.output {
+  color: var(--fg-secondary);
+  white-space: pre-wrap;
+  margin-bottom: 0.75rem;
+  padding-left: 0;
+  line-height: 1.4;
+}
+
+.systemOutput {
+  color: var(--fg-secondary);
+  white-space: pre-wrap;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  color: var(--fg-primary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  outline: none;
+  flex: 1;
+  min-width: 100px;
+  caret-color: var(--term-green);
+}
+
+/* Scrollbar for terminal */
+.body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.body::-webkit-scrollbar-track {
+  background: var(--bg-terminal);
+}
+
+.body::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+  background: var(--border-primary);
+}
