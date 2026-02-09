@@ -1,0 +1,186 @@
+/* About.module.css - Modern Bento Grid */
+.section {
+  padding: 8rem 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--gradient-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  font-size: 0.85rem;
+  color: var(--accent-purple);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--fg-primary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gradient {
+  background: var(--gradient-purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Bento Grid Layout */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+
+/* Card Base Styles */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-4px);
+}
+
+.cardGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.15), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+/* Card Sizes */
+.cardLarge {
+  grid-column: span 2;
+  grid-row: span 2;
+  padding: 2rem;
+}
+
+.cardMedium {
+  grid-column: span 2;
+}
+
+.cardSmall {
+  grid-column: span 1;
+}
+
+/* Card Content */
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--fg-primary);
+  margin-bottom: 0.75rem;
+}
+
+.cardText {
+  font-size: 0.95rem;
+  color: var(--fg-secondary);
+  line-height: 1.6;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: var(--fg-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--fg-muted);
+  line-height: 1.7;
+}
+
+.highlight {
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+.timezone {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+}
+
+/* Tools Grid */
+.toolsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tool {
+  padding: 0.4rem 0.8rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--accent-purple);
+  transition: all 0.3s ease;
+}
+
+.tool:hover {
+  background: rgba(139, 92, 246, 0.2);
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cardLarge {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardLarge,
+  .cardMedium,
+  .cardSmall {
+    grid-column: span 1;
+  }
+}
