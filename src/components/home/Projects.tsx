@@ -27,7 +27,7 @@ const PROJECTS = [
             "Ultrasonic sensors and ADC integration",
             "Custom communication protocols"
         ],
-        github: "https://github.com/sahil/fire-extinguisher",
+        github: "https://github.com/sahil7741/fire-extinguisher",
         color: "blue",
         icon: "🔥"
     },
@@ -40,7 +40,7 @@ const PROJECTS = [
             "Lightweight CV techniques",
             "Performance-accuracy tradeoffs"
         ],
-        github: "https://github.com/sahil/edge-cv",
+        github: "https://github.com/sahil7741/edge-cv",
         color: "cyan",
         icon: "📷"
     },
@@ -53,7 +53,7 @@ const PROJECTS = [
             "Thread-safe queues and thread pools",
             "Event-driven TCP server with epoll"
         ],
-        github: "https://github.com/sahil/systems-projects",
+        github: "https://github.com/sahil7741/systems-projects",
         color: "pink",
         icon: "⚡"
     }
@@ -162,7 +162,7 @@ export default function Projects() {
             </div>
 
             <div className={styles.viewMore}>
-                <Link href="https://github.com/sahil" target="_blank" className={`${styles.viewMoreBtn} interactive`}>
+                <Link href="https://github.com/sahil7741" target="_blank" className={`${styles.viewMoreBtn} interactive`}>
                     View All Projects
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <line x1="5" y1="12" x2="19" y2="12"></line>

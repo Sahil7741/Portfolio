@@ -26,7 +26,7 @@ export default function Footer() {
                     </div>
                     <div className={styles.linkGroup}>
                         <h4 className={styles.linkTitle}>Connect</h4>
-                        <a href="https://github.com/sahil" target="_blank" rel="noopener noreferrer" className={styles.link}>GitHub</a>
+                        <a href="https://github.com/sahil7741" target="_blank" rel="noopener noreferrer" className={styles.link}>GitHub</a>
                         <a href="https://linkedin.com/in/sahil" target="_blank" rel="noopener noreferrer" className={styles.link}>LinkedIn</a>
                         <a href="https://twitter.com/sahil" target="_blank" rel="noopener noreferrer" className={styles.link}>Twitter</a>
                     </div>

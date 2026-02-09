@@ -1,7 +1,7 @@
 import styles from './Contact.module.css';
 
 const SOCIAL_LINKS = [
-    { name: "GitHub", url: "https://github.com/sahil", icon: "📦" },
+    { name: "GitHub", url: "https://github.com/sahil7741", icon: "📦" },
     { name: "LinkedIn", url: "https://linkedin.com/in/sahil", icon: "💼" },
 ];
 
