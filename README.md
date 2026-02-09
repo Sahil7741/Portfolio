@@ -1,7 +1,3 @@
-# Portfolio
-
-A modern portfolio website built with [Next.js](https://nextjs.org).
-
 ## Getting Started
 
 First, run the development server:
