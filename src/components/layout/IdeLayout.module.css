@@ -1,0 +1,129 @@
+.layout {
+  display: grid;
+  grid-template-columns: 50px 250px 1fr;
+  grid-template-rows: 1fr 22px;
+  grid-template-areas: 
+    "activity sidebar main"
+    "statusbar statusbar statusbar";
+  height: 100vh;
+  width: 100vw;
+  background: var(--ide-bg);
+}
+
+/* ACTIVITY BAR */
+.activityBar {
+  grid-area: activity;
+  background: var(--ide-activity);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+}
+
+.icon:hover { color: #fff; }
+.active { color: #fff; border-left-color: #fff; }
+
+/* SIDEBAR */
+.sidebar {
+  grid-area: sidebar;
+  background: var(--ide-sidebar);
+  border-right: 1px solid var(--ide-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  font-size: 0.7rem;
+  padding: 10px 20px;
+  color: var(--fg-secondary);
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+/* MAIN AREA (Editor + Terminal) */
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editorContainer {
+  flex: 1;
+  background: var(--ide-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+/* TERMINAL PANEL */
+.panel {
+  height: 300px;
+  border-top: 1px solid var(--ide-border);
+  background: var(--ide-panel);
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--ide-border);
+  height: 35px;
+  align-items: center;
+}
+
+.panelTab {
+  font-size: 0.75rem;
+  color: var(--fg-secondary);
+  cursor: pointer;
+}
+
+.panelTab:hover { color: var(--fg-primary); }
+
+.panelTabActive {
+  font-size: 0.75rem;
+  color: var(--fg-primary);
+  border-bottom: 1px solid #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.panelContent {
+  flex: 1;
+  overflow: hidden;
+  padding: 0.5rem;
+  font-family: var(--font-mono);
+}
+
+/* STATUS BAR */
+.statusbar {
+  grid-area: statusbar;
+  background: var(--ide-statusbar);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 0 0 1fr;
+  }
+}

@@ -1,0 +1,54 @@
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.header {
+  border-bottom: 1px solid var(--panel-border);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.decor {
+  display: flex;
+  gap: 2px;
+}
+
+.block {
+  width: 4px;
+  height: 4px;
+  background: var(--secondary);
+  opacity: 0.5;
+}
+
+.content {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid var(--accent-blue);
+  border-right: 2px solid var(--accent-blue);
+}
